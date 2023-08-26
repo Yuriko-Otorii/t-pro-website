@@ -1,8 +1,49 @@
+import smallHeroImg from "../assets/work image5.jpg";
+import mediumHeroImg from "../assets/work image9.jpg";
 
-const Hero = () => {
+export const Hero = () => {
+  const displayContactPopup = () => {};
+
   return (
-    <div>Hero</div>
-  )
-}
-
-export default Hero
+    <>
+      <div className="relative w-screen h-screen md:hidden">
+        <img
+          src={smallHeroImg}
+          alt="House image"
+          className="w-screen h-screen absolute object-cover object-center"
+        />
+        <div className="w-screen h-screen absolute z-10 bg-gradient-to-t from-gray-900"></div>
+        <div className="flex flex-col items-center gap-8 absolute bottom-[10%] z-10">
+          <h1 className="text-white text-center text-[2rem] font-cormorant px-[1rem]">
+            Transform your property by professional painters in Vancouver
+          </h1>
+          <button
+            onClick={displayContactPopup}
+            className="text-white text-center text-[1.5rem] py-[.5rem] font-bold bg-transparent border-2 border-white font-cormorant"
+          >
+            Request Estimate
+          </button>
+        </div>
+      </div>
+      <div className="relative w-screen h-screen hidden md:block">
+        <img
+          src={mediumHeroImg}
+          alt="House image"
+          className="w-screen h-screen absolute object-cover object-center"
+        />
+        <div className="w-screen h-screen absolute z-10 bg-gradient-to-t from-gray-900"></div>
+        <div className="flex flex-col items-center gap-8 absolute bottom-[10%] left-[50%] translate-x-[-50%] z-10">
+          <h1 className="text-white text-center text-[2.5rem] font-cormorant px-[1rem]">
+            Transform your property by professional painters in Vancouver
+          </h1>
+          <button
+            onClick={displayContactPopup}
+            className="text-white text-center text-[1.5rem] py-[.5rem] font-bold bg-transparent border-2 border-white font-cormorant"
+          >
+            Request Estimate
+          </button>
+        </div>
+      </div>
+    </>
+  );
+};
