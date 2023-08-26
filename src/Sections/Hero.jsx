@@ -25,13 +25,13 @@ export const Hero = () => {
           </button>
         </div>
       </div>
-      <div className="relative w-screen h-screen hidden md:block">
+      <div className="relative w-screen h-[calc(100vh-24px)] mt-[24px] hidden md:block">
         <img
           src={mediumHeroImg}
           alt="House image"
-          className="w-screen h-screen absolute object-cover object-center"
+          className="w-screen h-[calc(100vh-24px)] mt-[24px] absolute object-cover object-center"
         />
-        <div className="w-screen h-screen absolute z-10 bg-gradient-to-t from-gray-900"></div>
+        <div className="w-screen h-[calc(100vh-24px)] mt-[24px] absolute z-10 bg-gradient-to-t from-gray-900"></div>
         <div className="flex flex-col items-center gap-8 absolute bottom-[10%] left-[50%] translate-x-[-50%] z-10">
           <h1 className="text-white text-center text-[2.5rem] font-cormorant px-[1rem]">
             Transform your property by professional painters in Vancouver
