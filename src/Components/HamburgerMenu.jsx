@@ -8,7 +8,7 @@ export const HamburgerMenu = () => {
   };
 
   return (
-    <div className="sm:block md:hidden font-cormorant">
+    <div className="sm:block md:hidden">
       <button
         type="button"
         className="z-50 space-y-2 absolute top-[16px] right-[8px]"
@@ -43,7 +43,7 @@ export const HamburgerMenu = () => {
             : "fixed top-0 right-[-100%] h-screen z-40 bg-white pt-8 px-3 ease-linear duration-300"
         }
       >
-        <ul className="flex flex-col gap-10 pt-10 text-[1.3rem]">
+        <ul className="flex flex-col items-center gap-10 pt-10 text-[1.3rem]">
           <li className="">
             <a href="#" className="text-[#333] border-b-2 boder-[#333] font-bold">
               Services
