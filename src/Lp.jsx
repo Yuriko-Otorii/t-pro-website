@@ -3,6 +3,7 @@ import { HamburgerMenu } from "./Components/HamburgerMenu"
 import { Hero } from "./Sections/Hero"
 import { Services } from "./Sections/Services"
 import { Protections } from "./Sections/Protections"
+import { Gallery } from "./Sections/Gallery"
 
 export const Lp = () => {
   return (
@@ -12,6 +13,7 @@ export const Lp = () => {
       <Hero />
       <Services />
       <Protections />
+      <Gallery />
     </>
   )
 }
