@@ -4,6 +4,7 @@ import { Hero } from "./Sections/Hero"
 import { Services } from "./Sections/Services"
 import { Protections } from "./Sections/Protections"
 import { Gallery } from "./Sections/Gallery"
+import { Testimonials } from "./Sections/Testimonials"
 
 export const Lp = () => {
   return (
@@ -14,6 +15,7 @@ export const Lp = () => {
       <Services />
       <Protections />
       <Gallery />
+      <Testimonials />
     </>
   )
 }
