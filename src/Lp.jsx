@@ -6,6 +6,7 @@ import { Protections } from "./Sections/Protections"
 import { Gallery } from "./Sections/Gallery"
 import { Testimonials } from "./Sections/Testimonials"
 import { AboutUs } from "./Sections/AboutUs"
+import { History } from "./Sections/History"
 
 export const Lp = () => {
   return (
@@ -18,6 +19,7 @@ export const Lp = () => {
       <Gallery />
       <Testimonials />
       <AboutUs />
+      <History />
     </>
   )
 }
