@@ -10,27 +10,27 @@ export default {
         'cormorant': ["Cormorant, serif"],
       },
       animation: {
-        "slide-in": "slide-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
-        "slide-out": "slide-out 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both"
+        "slide-in": "slide-in 0.2s linear",
+        "slide-out": "slide-out 0.2s linear"
       },
       keyframes: {
         "slide-in": {
           "0%": {
-            transform: "translateX(1000px)",
+            transform: "translateY(-50px)",
             opacity: "0"
           },
           to: {
-              transform: "translateX(0)",
+              transform: "translateY(0)",
               opacity: "1"
           }
         },
         "slide-out": {
           "0%": {
-            transform: "translateX(0)",
+            transform: "translateY(0)",
             opacity: "1"
           },
           to: {
-              transform: "translateX(1000px)",
+              transform: "translateY(1000px)",
               opacity: "0"
           }
         }

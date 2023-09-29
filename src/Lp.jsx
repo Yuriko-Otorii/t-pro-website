@@ -7,6 +7,7 @@ import { Gallery } from "./Sections/Gallery"
 import { Testimonials } from "./Sections/Testimonials"
 import { AboutUs } from "./Sections/AboutUs"
 import { History } from "./Sections/History"
+import { Faq } from "./Sections/Faq"
 
 export const Lp = () => {
   return (
@@ -20,6 +21,7 @@ export const Lp = () => {
       <Testimonials />
       <AboutUs />
       <History />
+      <Faq />
     </>
   )
 }
