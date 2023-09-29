@@ -1,8 +1,6 @@
-import logo from "../assets/Logo.jpg"
+import logo from "../assets/Logo.jpg";
 
-export const Navbar = () => {
-
-
+export const Navbar = ({ setIsContactModalOpen }) => {
   return (
     <nav className="hidden md:block w-full h-fit absolute top-0 left-0 z-10 bg-white p-[.5rem] pl-[3rem] pr-[3rem]">
       <div className="flex justify-between items-center">
@@ -17,7 +15,12 @@ export const Navbar = () => {
             <li className="font-bold text-[#333]">About us</li>
             <li className="font-bold text-[#333]">FAQ</li>
           </ul>
-          <button className="text-white text-[1.2rem] py-[.3rem] bg-[#145B19] font-bold">Request Estimate</button>
+          <button 
+            className="text-white text-[1.2rem] py-[.3rem] bg-[#145B19] font-bold"
+            onClick={() => setIsContactModalOpen(true)}
+          >
+            Request Estimate
+          </button>
         </div>
       </div>
     </nav>

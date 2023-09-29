@@ -1,8 +1,7 @@
 import smallHeroImg from "../assets/work image5.jpg";
 import mediumHeroImg from "../assets/work image9.jpg";
 
-export const Hero = () => {
-  const displayContactPopup = () => {};
+export const Hero = ({ setIsContactModalOpen }) => {
 
   return (
     <>
@@ -18,7 +17,7 @@ export const Hero = () => {
             Transform your property by professional painters in Vancouver
           </h1>
           <button
-            onClick={displayContactPopup}
+            onClick={() => setIsContactModalOpen(true)}
             className="text-white text-center text-[1.5rem] py-[.5rem] font-bold bg-transparent border-2 border-white"
           >
             Request Estimate
@@ -37,7 +36,7 @@ export const Hero = () => {
             Transform your property by professional painters in Vancouver
           </h1>
           <button
-            onClick={displayContactPopup}
+            onClick={() => setIsContactModalOpen(true)}
             className="text-white text-center text-[1.5rem] py-[.5rem] font-bold bg-transparent border-2 border-white"
           >
             Request Estimate
