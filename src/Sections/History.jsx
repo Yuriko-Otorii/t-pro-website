@@ -2,7 +2,10 @@ import logoOutline from "../assets/Logo outline top.png";
 
 export const History = () => {
   return (
-    <div className="flex flex-col items-center justify-center px-10 relative bg-[#145B19] w-screen min-h-screen h-fit px-[1rem] py-[2rem]">
+    <div
+      id="history"
+      className="flex flex-col items-center justify-center px-10 relative bg-[#145B19] w-screen min-h-screen h-fit px-[1rem] py-[2rem]"
+    >
       <div className="relative">
         <img
           src={logoOutline}

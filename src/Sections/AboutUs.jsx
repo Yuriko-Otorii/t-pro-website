@@ -2,7 +2,7 @@ import housePicture from "../assets/work image9.jpg";
 
 export const AboutUs = () => {
   return (
-    <div className="w-full p-[1rem] mb-[3rem] md:my-[5rem]">
+    <div className="w-full p-[1rem] mb-[3rem] md:my-[5rem]" id="aboutus">
       <div className="md:hidden">
         <h2 className="text-[#145B19] text-[2rem] uppercase text-center font-bold underline underline-offset-4 decoration-1 my-[2rem] md:mb-[4rem]">
           About us

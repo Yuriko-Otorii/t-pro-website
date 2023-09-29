@@ -6,9 +6,8 @@ import Gallery5 from "../assets/work image9.jpg";
 import Gallery6 from "../assets/work image7.jpg";
 
 export const Gallery = () => {
-
   return (
-    <div className="w-full p-[1rem]">
+    <div className="w-full p-[1rem]" id="gallery">
       <h2 className="text-[#145B19] text-[2rem] uppercase text-center font-bold underline underline-offset-4 decoration-1 my-[2rem] md:mb-[4rem]">
         Gallery
       </h2>

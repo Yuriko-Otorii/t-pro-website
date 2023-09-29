@@ -11,6 +11,7 @@ import { Faq } from "./Sections/Faq";
 import { Contact } from "./Sections/Contact";
 import { useState } from "react";
 import { ContactModal } from "./Modals/ContactModal";
+import { Footer } from "./Sections/Footer";
 
 export const Lp = () => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -29,6 +30,7 @@ export const Lp = () => {
       <History />
       <Faq />
       <Contact setIsContactModalOpen={setIsContactModalOpen} />
+      <Footer />
 
       {isContactModalOpen && <ContactModal setIsContactModalOpen={setIsContactModalOpen} />}
     </>

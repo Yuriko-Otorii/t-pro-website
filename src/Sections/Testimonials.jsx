@@ -6,7 +6,7 @@ import { TestimonialCard } from '../Components/TestimonialCard'
 
 export const Testimonials = () => {
   return (
-    <div className="w-full p-[1rem]">
+    <div className="w-full p-[1rem]" id='testimonials'>
       <h2 className="text-[#145B19] text-[2rem] uppercase text-center font-bold underline underline-offset-4 decoration-1 my-[2rem] md:mb-[4rem]">
         Testimonials
       </h2>
