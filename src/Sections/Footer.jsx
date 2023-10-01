@@ -4,13 +4,13 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import logo from "../assets/Logo.jpg";
 
-export const Footer = () => {
+export const Footer = ({ setIsCareerModalOpen }) => {
   return (
     <div className="flex flex-col items-center border-2 border-t-[#145B19] mt-10 pt-10">
       <div className="flex flex-col md:flex-row gap-12">
         <div className="flex gap-10 mb-5 md:mb-0 md:flex-row md:gap-12">
           <div className="flex flex-col">
-            <p className="font-bold mb-3">Company</p>
+            <p className="font-bold text-lg mb-5">Company</p>
             <ul className="flex flex-col gap-1">
               <li>
                 <AnchorLink className="text-[#213547]" href="#aboutus">
@@ -43,14 +43,17 @@ export const Footer = () => {
                 </AnchorLink>
               </li>
               <li>
-                <AnchorLink className="text-[#213547]" href="#career">
+                <p
+                  className="text-[#213547] font-semibold cursor-pointer"
+                  onClick={() => setIsCareerModalOpen(true)}
+                >
                   Career
-                </AnchorLink>
+                </p>
               </li>
             </ul>
           </div>
           <div className="flex flex-col">
-            <p className="font-bold mb-3">Services</p>
+            <p className="font-bold text-lg mb-5">Services</p>
             <ul className="flex flex-col gap-1">
               <li>
                 <AnchorLink className="text-[#213547]" href="#services">
@@ -103,7 +106,7 @@ export const Footer = () => {
                   d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
                 />
               </svg>
-              <p>tpropainting03@gmail.com</p>
+              <p className="font-semibold">tpropainting03@gmail.com</p>
             </div>
             <div className="flex gap-1 items-center">
               <svg
@@ -121,7 +124,7 @@ export const Footer = () => {
                 />
               </svg>
 
-              <p>+1 (236) 886 - 1661</p>
+              <p className="font-semibold">+1 (236) 886 - 1661</p>
             </div>
             <div className="flex gap-1 items-center">
               <svg
@@ -143,10 +146,10 @@ export const Footer = () => {
                   d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
                 />
               </svg>
-              <p>Vancouver, BC</p>
+              <p className="font-semibold">Vancouver, BC</p>
             </div>
           </div>
-          <div >
+          <div>
             <a
               href="https://instagram.com/tpropainting?igshid=MzMyNGUyNmU2YQ=="
               rel="noreferrer"

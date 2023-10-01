@@ -12,6 +12,7 @@ import { Contact } from "./Sections/Contact";
 import { useState } from "react";
 import { ContactModal } from "./Modals/ContactModal";
 import { Footer } from "./Sections/Footer";
+import { CareerModal } from "./Modals/CareerModal";
 
 export const Lp = () => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -30,9 +31,10 @@ export const Lp = () => {
       <History />
       <Faq />
       <Contact setIsContactModalOpen={setIsContactModalOpen} />
-      <Footer />
+      <Footer setIsCareerModalOpen={setIsCareerModalOpen} />
 
       {isContactModalOpen && <ContactModal setIsContactModalOpen={setIsContactModalOpen} />}
+      {isCareerModalOpen && <CareerModal setIsCareerModalOpen={setIsCareerModalOpen} />}
     </>
   );
 };

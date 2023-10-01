@@ -1,7 +1,9 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import Datepicker from "react-tailwindcss-datepicker";
 
 export const ContactForm = () => {
+  const form = useRef(null)
   const nameInput = useRef(null);
   const emailInput = useRef(null);
   const phoneNumberInput = useRef(null);
@@ -10,41 +12,47 @@ export const ContactForm = () => {
   const cityInput = useRef(null);
   const messsageInput = useRef(null);
 
-  const [possession, setPossession] = useState("No")
+  const [possession, setPossession] = useState("No");
   const [value, setValue] = useState({
     startDate: new Date(),
     endDate: new Date().setMonth(11),
   });
+
+  useEffect(() => {
+    const parentNode = document.getElementById("datePicker")
+    const datePickerInput = parentNode.children[0].children[1].children[0]
+    datePickerInput.setAttribute('name', "date")
+  }, [])
 
   const handleValueChange = (newValue) => {
     console.log("newValue:", newValue);
     setValue(newValue);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const requestData = {
-      fullname: nameInput.current.value,
-      email: emailInput.current.value,
-      phoneNumber: phoneNumberInput.current.value,
-      address: addressInput.current.value,
-      buzzer: buzzerInput.current.value,
-      city: cityInput.current.value,
-      possession,
-      message: messsageInput.current.value, 
+    try {
+      const result = await emailjs.sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_PUBLIC_KEY
+      );
+      console.log(result);
+    } catch (error) {
+      console.log("Something went wrong...");
     }
-
-    console.log(requestData);
   };
 
   return (
-    <form className="w-full flex flex-col">
+    <form ref={form} onSubmit={handleSubmit} className="w-full flex flex-col">
       <label className="w-full mt-5">
         <span className="block font-semibold mb-1">Full name</span>
         <input
           ref={nameInput}
           type="text"
+          name="fullname"
           className="w-full px-3 py-2 font-semibold bg-white border border-slate-300 rounded-lg shadow-sm"
           required
         />
@@ -55,6 +63,7 @@ export const ContactForm = () => {
           <input
             ref={emailInput}
             type="email"
+            name="email"
             className="w-full px-3 py-2 font-semibold bg-white border border-slate-300 rounded-lg shadow-sm"
           />
         </label>
@@ -63,6 +72,7 @@ export const ContactForm = () => {
           <input
             ref={phoneNumberInput}
             type="text"
+            name="phoneNumber"
             className="w-full px-3 py-2 font-semibold bg-white border border-slate-300 rounded-lg shadow-sm"
             required
           />
@@ -73,6 +83,7 @@ export const ContactForm = () => {
         <input
           ref={addressInput}
           type="text"
+          name="address"
           className="w-full px-3 py-2 font-semibold bg-white border border-slate-300 rounded-lg shadow-sm"
           required
         />
@@ -83,6 +94,7 @@ export const ContactForm = () => {
           <input
             ref={buzzerInput}
             type="text"
+            name="buzzer"
             className="w-full px-3 py-2 font-semibold bg-white border border-slate-300 rounded-lg shadow-sm"
           />
         </label>
@@ -91,6 +103,7 @@ export const ContactForm = () => {
           <input
             ref={cityInput}
             type="text"
+            name="city"
             className="w-full px-3 py-2 font-semibold bg-white border border-slate-300 rounded-lg shadow-sm"
             required
           />
@@ -105,6 +118,7 @@ export const ContactForm = () => {
             <input
               name="possession"
               type="radio"
+              value={possession}
               onChange={() => setPossession("Yes")}
               className="w-full px-3 py-2 font-semibold bg-white border border-slate-300 rounded-lg shadow-sm"
             />
@@ -114,6 +128,7 @@ export const ContactForm = () => {
             <input
               name="possession"
               type="radio"
+              value={possession}
               onChange={() => setPossession("No")}
               className="w-full px-3 py-2 font-semibold bg-white border border-slate-300 rounded-lg shadow-sm"
             />
@@ -121,7 +136,7 @@ export const ContactForm = () => {
           </label>
         </div>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col" id="datePicker">
         <label className="block font-semibold mb-1">
           <span className="block font-semibold mb-1">
             When would you like to start and end?
@@ -129,6 +144,7 @@ export const ContactForm = () => {
           <Datepicker
             primaryColor={"teal"}
             value={value}
+            name="date"
             onChange={handleValueChange}
             displayFormat={"MM/DD/YYYY"}
             inputClassName="w-full px-3 py-2 font-semibold border border-slate-300 rounded-lg shadow-sm"
@@ -142,6 +158,7 @@ export const ContactForm = () => {
         <textarea
           ref={messsageInput}
           type="text"
+          name="message"
           className="w-full px-3 py-2 font-semibold bg-white border border-slate-300 rounded-lg shadow-sm"
           rows={4}
           required
