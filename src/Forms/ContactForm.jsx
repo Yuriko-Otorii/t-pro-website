@@ -2,8 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Datepicker from "react-tailwindcss-datepicker";
 
-export const ContactForm = () => {
+export const ContactForm = ({ setIsSentMessage }) => {
   const form = useRef(null)
+  const [isSending, setIsSending] = useState(false)
   const [possession, setPossession] = useState("No");
   const [value, setValue] = useState({
     startDate: new Date(),
@@ -23,7 +24,7 @@ export const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setIsSending(true)
     try {
       const result = await emailjs.sendForm(
         import.meta.env.VITE_SERVICE_ID,
@@ -33,6 +34,8 @@ export const ContactForm = () => {
       );
       if(result.satus === 200){
         console.log("Success");
+        setIsSending(false)
+        setIsSentMessage(true)
       }
     } catch (error) {
       console.log("Something went wrong...");
@@ -156,7 +159,7 @@ export const ContactForm = () => {
         onClick={(e) => handleSubmit(e)}
         className="w-2/3 self-center bg-[#145B19] text-white font-semibold my-8 hover:text-[#145B19] hover:bg-white hover:border border-[#145B19] disabled:opacity-50"
       >
-        Send
+        {isSending? "Sending...": "Send"}
       </button>
     </form>
   );
