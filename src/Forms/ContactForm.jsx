@@ -4,14 +4,6 @@ import Datepicker from "react-tailwindcss-datepicker";
 
 export const ContactForm = () => {
   const form = useRef(null)
-  const nameInput = useRef(null);
-  const emailInput = useRef(null);
-  const phoneNumberInput = useRef(null);
-  const addressInput = useRef(null);
-  const buzzerInput = useRef(null);
-  const cityInput = useRef(null);
-  const messsageInput = useRef(null);
-
   const [possession, setPossession] = useState("No");
   const [value, setValue] = useState({
     startDate: new Date(),
@@ -35,11 +27,13 @@ export const ContactForm = () => {
     try {
       const result = await emailjs.sendForm(
         import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
+        import.meta.env.VITE_CONTACT_TEMPLATE_ID,
         form.current,
         import.meta.env.VITE_PUBLIC_KEY
       );
-      console.log(result);
+      if(result.satus === 200){
+        console.log("Success");
+      }
     } catch (error) {
       console.log("Something went wrong...");
     }
@@ -50,7 +44,6 @@ export const ContactForm = () => {
       <label className="w-full mt-5">
         <span className="block font-semibold mb-1">Full name</span>
         <input
-          ref={nameInput}
           type="text"
           name="fullname"
           className="w-full px-3 py-2 font-semibold bg-white border border-slate-300 rounded-lg shadow-sm"
@@ -61,7 +54,6 @@ export const ContactForm = () => {
         <label className="w-full mt-5">
           <span className="block font-semibold mb-1">Email</span>
           <input
-            ref={emailInput}
             type="email"
             name="email"
             className="w-full px-3 py-2 font-semibold bg-white border border-slate-300 rounded-lg shadow-sm"
@@ -70,7 +62,6 @@ export const ContactForm = () => {
         <label className="w-full mt-5">
           <span className="block font-semibold mb-1">Phone number</span>
           <input
-            ref={phoneNumberInput}
             type="text"
             name="phoneNumber"
             className="w-full px-3 py-2 font-semibold bg-white border border-slate-300 rounded-lg shadow-sm"
@@ -81,7 +72,6 @@ export const ContactForm = () => {
       <label className="w-full">
         <span className="block font-semibold mb-1">Address</span>
         <input
-          ref={addressInput}
           type="text"
           name="address"
           className="w-full px-3 py-2 font-semibold bg-white border border-slate-300 rounded-lg shadow-sm"
@@ -92,7 +82,6 @@ export const ContactForm = () => {
         <label className="basis-[30%] w-full mt-5">
           <span className="block font-semibold mb-1">Buzzer</span>
           <input
-            ref={buzzerInput}
             type="text"
             name="buzzer"
             className="w-full px-3 py-2 font-semibold bg-white border border-slate-300 rounded-lg shadow-sm"
@@ -101,7 +90,6 @@ export const ContactForm = () => {
         <label className="basis-[70%] w-full mt-5">
           <span className="block font-semibold mb-1">City</span>
           <input
-            ref={cityInput}
             type="text"
             name="city"
             className="w-full px-3 py-2 font-semibold bg-white border border-slate-300 rounded-lg shadow-sm"
@@ -156,7 +144,6 @@ export const ContactForm = () => {
           What would you like to paint?
         </span>
         <textarea
-          ref={messsageInput}
           type="text"
           name="message"
           className="w-full px-3 py-2 font-semibold bg-white border border-slate-300 rounded-lg shadow-sm"

@@ -44,7 +44,7 @@ export const Footer = ({ setIsCareerModalOpen }) => {
               </li>
               <li>
                 <p
-                  className="text-[#213547] font-semibold cursor-pointer"
+                  className="text-[#213547] cursor-pointer"
                   onClick={() => setIsCareerModalOpen(true)}
                 >
                   Career

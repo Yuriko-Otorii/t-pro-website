@@ -1,4 +1,3 @@
-import { CareerForm } from "../Forms/CareerForm"
 
 export const CareerModal = ({ setIsCareerModalOpen }) => {
   return (
@@ -27,7 +26,8 @@ export const CareerModal = ({ setIsCareerModalOpen }) => {
         <h2 className="text-[1.5rem] uppercase text-center font-bold underline underline-offset-4 decoration-1 mb-5">
           Work with us
         </h2>
-        <CareerForm />
+        <h3>Send your resume and let us know your passion!</h3>
+        <button type="button">Open your mailer</button>
       </div>
     </div>
   )
