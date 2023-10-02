@@ -10,7 +10,7 @@ export const Testimonials = () => {
       <h2 className="text-[#145B19] text-[2rem] uppercase text-center font-bold underline underline-offset-4 decoration-1 my-[2rem] md:mb-[4rem]">
         Testimonials
       </h2>
-      <div className="flex flex-col">
+      <div className="flex flex-col xl:w-[80%] mx-auto">
         <FontAwesomeIcon icon={faQuoteLeft} style={{color: "#b5b5b5", alignSelf: "start"}} size='4x'/>
         <div className='flex flex-col md:flex-row gap-[1rem] my-[2rem] md:w-[90%] lg:w-[80%] mx-auto'>
           {testimonials.map(testimonial => (
