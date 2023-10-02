@@ -1,12 +1,13 @@
+import careerImg from "../assets/career-img.jpg";
 
 export const CareerModal = ({ setIsCareerModalOpen }) => {
   return (
     <div className="flex justify-center items-center py-5 h-screen fixed inset-0 z-50 outline-none focus:outline-none">
       <div className="overlay absolute inset-0 z-0 bg-gray-400 opacity-80"></div>
-      <div className="p-5 md:px-8 border-0 rounded-lg shadow-lg relative flex flex-col items-center justify-between w-4/5 md:w-[60%] h-fit max-h-[90%] overflow-y-scroll bg-white outline-none focus:outline-none">
+      <div className="p-5 md:px-8 border-0 rounded-lg shadow-lg relative w-[95%] h-fit md:w-[95%] md:max-w-[700px] md:h-full md:max-h-[500px] overflow-y-scroll bg-white outline-none focus:outline-none">
         <div
           onClick={() => setIsCareerModalOpen(false)}
-          className="flex justify-end absolute top-[3%] md:top-[5%] right-[5%]"
+          className="absolute top-[3%] md:top-[5%] right-[5%]"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -23,12 +24,30 @@ export const CareerModal = ({ setIsCareerModalOpen }) => {
             />
           </svg>
         </div>
-        <h2 className="text-[1.5rem] uppercase text-center font-bold underline underline-offset-4 decoration-1 mb-5">
-          Work with us
-        </h2>
-        <h3>Send your resume and let us know your passion!</h3>
-        <button type="button">Open your mailer</button>
+        <img
+          src={careerImg}
+          alt="Career image"
+          className="hidden md:block w-[55%] h-full absolute top-0 left-0 bg-gradient-to-r from-transparent to-white"
+        />
+        <div className="hidden md:block w-[55%] h-full absolute top-0 left-0 z-40 bg-gradient-to-r from-transparent to-white"></div>
+
+        <div className="md:absolute md:top-[15%] md:right-[3%] md:z-50">
+          <h2 className="text-[1.5rem] uppercase text-center font-bold underline underline-offset-4 decoration-1 mb-5">
+            Work with us
+          </h2>
+          <h3 className="text-center">
+            Send your resume and let us know your passion!
+          </h3>
+          <div className="flex justify-center mt-20 mb-10">
+            <a
+              href="mailto:yuriko.otorii@gmail.com"
+              className="text-white text-[1.2rem] py-[.5rem] px-[2rem] rounded-lg bg-[#145B19] font-bold"
+            >
+              Open your mailer
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
