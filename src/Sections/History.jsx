@@ -1,6 +1,16 @@
+import { useRef, useEffect } from "react";
+import { titleUnderlineAnimation } from "../animation/titleUnderline";
+
 import logoOutline from "../assets/Logo outline top.png";
 
 export const History = () => {
+  const titleElem = useRef(null);
+  const underline = useRef(null);
+
+  useEffect(() => {
+    titleUnderlineAnimation(titleElem.current, underline.current);
+  }, []);
+
   return (
     <div
       id="history"
@@ -12,9 +22,15 @@ export const History = () => {
           alt="Logo outline"
           className="h-auto md:block md:w-[500px] md:h-[150px] lg:w-[700px] lg:h-[180px] xl:w-[1000px] xl:h-[250px] mx-auto mt-10"
         />
-        <h2 className="text-white text-[2rem] uppercase text-center font-bold underline underline-offset-4 decoration-1">
-          Our History
-        </h2>
+        <div
+          ref={titleElem}
+          className="relativ w-fit mx-auto"
+        >
+          <h2 className="text-white w-fit text-[2rem] uppercase text-center font-bold decoration-1">
+            Our history
+          </h2>
+          <div ref={underline} className="w-full bg-white h-[2px]"></div>
+        </div>
       </div>
       <div className="w-[80%] md:w-[450px] lg:w-[650px] xl:w-[800px]">
         <p className="text-white text-[1.3rem] mt-16 mb-20">

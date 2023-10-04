@@ -1,3 +1,6 @@
+import { useRef, useEffect } from "react"
+import { titleUnderlineAnimation } from "../animation/titleUnderline"
+
 import Gallery1 from "../assets/work image14.jpg";
 import Gallery2 from "../assets/work image3.jpg";
 import Gallery3 from "../assets/work image1.jpg";
@@ -6,11 +9,19 @@ import Gallery5 from "../assets/work image9.jpg";
 import Gallery6 from "../assets/work image7.jpg";
 
 export const Gallery = () => {
+  const titleElem = useRef(null)
+  const underline = useRef(null)
+
+  useEffect(() => {
+    titleUnderlineAnimation(titleElem.current, underline.current)
+  }, [])
+
   return (
     <div className="w-full p-[1rem]" id="gallery">
-      <h2 className="text-[#145B19] text-[2rem] uppercase text-center font-bold underline underline-offset-4 decoration-1 my-[2rem] md:mb-[4rem]">
-        Gallery
-      </h2>
+      <div ref={titleElem} className="relativ w-fit mx-auto my-[1rem] my-[2rem] md:mb-[4rem]">
+        <h2 className="text-[#145B19] w-fit text-[2rem] uppercase text-center font-bold decoration-1">Gallery</h2>
+        <div ref={underline} className="w-full bg-[#145B19] h-[2px]"></div>
+      </div>
       <div className="grid grid-cols-2 grid-rows-4 gap-[.5rem]">
         <img
           src={Gallery1}

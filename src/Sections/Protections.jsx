@@ -1,16 +1,26 @@
+import { useRef, useEffect } from "react"
+import { titleUnderlineAnimation } from "../animation/titleUnderline"
 import HomeCareIcon from "../assets/home-insurance-icon.svg";
 import GuaranteeIcon from "../assets/premium-icon.svg";
 import InsuranceIcon from "../assets/trust-icon.svg";
 
 export const Protections = () => {
+  const titleElem = useRef(null)
+  const underline = useRef(null)
+
+  useEffect(() => {
+    titleUnderlineAnimation(titleElem.current, underline.current)
+  }, [])
+
   return (
     <div
       id="protections"
-      className="border-2 border-y-[#145B19] border-x-white mt-[4rem] md:mt-[7rem] mb-[4rem] mx-[1rem] md:mx-[4rem] md:pt-[2rem] md:pb-[5rem]"
+      className="border-2 border-y-[#145B19] border-x-white mt-[4rem] md:mt-[7rem] mb-[4rem] mx-[1rem] md:mx-[4rem] pt-[2rem] pb-[5rem]"
     >
-      <h2 className="text-[#145B19] text-[2rem] uppercase text-center font-bold underline underline-offset-4 decoration-1 my-[2rem] md:mb-[4rem]">
-        Protections
-      </h2>
+      <div ref={titleElem} className="relativ w-fit mx-auto my-[1rem] mt-[3rem] mb-[5rem]">
+        <h2 className="text-[#145B19] w-fit text-[2rem] uppercase text-center font-bold decoration-1">Protections</h2>
+        <div ref={underline} className="w-full bg-[#145B19] h-[2px]"></div>
+      </div>
       <div className="flex flex-col items-center md:flex-row md:justify-around md:items-start gap-10 md:gap-0">
         <div className="w-[70%] md:w-[25%] flex flex-col mb-5">
           <img
@@ -51,7 +61,7 @@ export const Protections = () => {
           <h3 className="text-[1.3rem] font-bold mb-[.5rem]">
             3-year application guarantee
           </h3>
-          <p className="">
+          <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam,
