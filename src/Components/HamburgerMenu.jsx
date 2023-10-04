@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 export const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,25 +45,30 @@ export const HamburgerMenu = () => {
         }
       >
         <ul className="flex flex-col items-center gap-10 pt-10 text-[1.3rem]">
-          <li className="">
-            <a href="#" className="text-[#333] border-b-2 boder-[#333] font-bold">
+          <li onClick={() => setIsOpen(false)}>
+            <AnchorLink href="#services" className="text-[#333] border-b-2 boder-[#333] font-bold">
               Services
-            </a>
+            </AnchorLink>
           </li>
-          <li className="">
-            <a href="#" className="text-[#333] border-b-2 boder-[#333] font-bold">
+          <li onClick={() => setIsOpen(false)}>
+            <AnchorLink href="#protections" className="text-[#333] border-b-2 boder-[#333] font-bold">
+              Protections
+            </AnchorLink>
+          </li>
+          <li onClick={() => setIsOpen(false)}>
+            <AnchorLink href="#gallery" className="text-[#333] border-b-2 boder-[#333] font-bold">
               Gallery
-            </a>
+            </AnchorLink>
           </li>
-          <li className="">
-            <a href="#" className="text-[#333] border-b-2 boder-[#333] font-bold">
+          <li onClick={() => setIsOpen(false)}>
+            <AnchorLink href="#aboutus" className="text-[#333] border-b-2 boder-[#333] font-bold">
               About us
-            </a>
+            </AnchorLink>
           </li>
-          <li className="">
-            <a href="#" className="text-[#333] border-b-2 boder-[#333] font-bold">
+          <li onClick={() => setIsOpen(false)}>
+            <AnchorLink href="#faq" className="text-[#333] border-b-2 boder-[#333] font-bold">
               FAQ
-            </a>
+            </AnchorLink>
           </li>
         </ul>
       </nav>

@@ -37,7 +37,7 @@ export const Hero = ({ setIsContactModalOpen }) => {
           </h1>
           <button
             onClick={() => setIsContactModalOpen(true)}
-            className="text-white text-center text-[1.5rem] py-[.5rem] font-bold bg-transparent border-2 border-white"
+            className="text-white text-center text-[1.5rem] py-[.5rem] font-bold bg-transparent border-2 border-white hover:text-[#145B19] hover:bg-white transition duration-[500ms]"
           >
             Request Estimate
           </button>

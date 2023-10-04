@@ -1,3 +1,4 @@
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import logo from "../assets/Logo.jpg";
 
 export const Navbar = ({ setIsContactModalOpen }) => {
@@ -6,17 +7,37 @@ export const Navbar = ({ setIsContactModalOpen }) => {
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-2">
           <img src={logo} alt="Logo image" className="w-[40px] h-[40px]" />
-          <p className="font-bold">T-Pro-Painting</p>
         </div>
         <div className="flex items-center gap-14">
           <ul className="flex items-center gap-8">
-            <li className="font-bold text-[#333]">Services</li>
-            <li className="font-bold text-[#333]">Gallery</li>
-            <li className="font-bold text-[#333]">About us</li>
-            <li className="font-bold text-[#333]">FAQ</li>
+            <li>
+              <AnchorLink className="font-bold text-[#333]" href="#services">
+                Services
+              </AnchorLink>
+            </li>
+            <li>
+              <AnchorLink className="font-bold text-[#333]" href="#protections">
+                Protection
+              </AnchorLink>
+            </li>
+            <li>
+              <AnchorLink className="font-bold text-[#333]" href="#gallery">
+                Gallery
+              </AnchorLink>
+            </li>
+            <li>
+              <AnchorLink className="font-bold text-[#333]" href="#aboutus">
+                About us
+              </AnchorLink>
+            </li>
+            <li>
+              <AnchorLink className="font-bold text-[#333]" href="#faq">
+                FAQ
+              </AnchorLink>
+            </li>
           </ul>
-          <button 
-            className="text-white text-[1.2rem] py-[.3rem] bg-[#145B19] font-bold"
+          <button
+            className="text-white text-[1.2rem] py-[.3rem] px-[.8rem] bg-[#145B19] font-bold hover:text-[#145B19] hover:bg-white transition duration-[500ms]"
             onClick={() => setIsContactModalOpen(true)}
           >
             Request Estimate
