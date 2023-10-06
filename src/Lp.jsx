@@ -34,8 +34,18 @@ export const Lp = () => {
         <Contact setIsContactModalOpen={setIsContactModalOpen} />
         <Footer setIsCareerModalOpen={setIsCareerModalOpen} />
 
-        {isContactModalOpen && <ContactModal setIsContactModalOpen={setIsContactModalOpen} />}
-        {isCareerModalOpen && <CareerModal setIsCareerModalOpen={setIsCareerModalOpen} />}
+        {isContactModalOpen && (
+          <ContactModal
+            setIsContactModalOpen={setIsContactModalOpen}
+            isContactModalOpen={isContactModalOpen}
+          />
+        )}
+        {isCareerModalOpen && (
+          <CareerModal
+            setIsCareerModalOpen={setIsCareerModalOpen}
+            isCareerModalOpen={isCareerModalOpen}
+          />
+        )}
       </main>
     </>
   );

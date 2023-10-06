@@ -1,10 +1,10 @@
 import careerImg from "../assets/career-img.jpg";
 
-export const CareerModal = ({ setIsCareerModalOpen }) => {
+export const CareerModal = ({ isCareerModalOpen, setIsCareerModalOpen }) => {
   return (
     <div className="flex justify-center items-center py-5 h-screen fixed inset-0 z-50 outline-none focus:outline-none">
       <div className="overlay absolute inset-0 z-0 bg-gray-400 opacity-80"></div>
-      <div className="p-5 md:px-8 border-0 rounded-lg shadow-lg relative w-[95%] h-fit md:w-[95%] md:max-w-[700px] md:h-full md:max-h-[500px] overflow-y-scroll bg-white outline-none focus:outline-none">
+      <div className={`p-5 md:px-8 border-0 rounded-lg shadow-lg relative w-[95%] h-fit md:w-[95%] md:max-w-[700px] md:h-full md:max-h-[500px] overflow-y-scroll bg-white outline-none focus:outline-none ${isCareerModalOpen && 'animate-slide-in'}`}>
         <div
           onClick={() => setIsCareerModalOpen(false)}
           className="absolute top-[3%] md:top-[5%] right-[5%]"

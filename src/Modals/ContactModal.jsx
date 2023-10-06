@@ -3,23 +3,23 @@ import { ContactForm } from "../Forms/ContactForm";
 import contactImg from "../assets/paint img.jpg";
 import { useEffect } from "react";
 
-export const ContactModal = ({ setIsContactModalOpen }) => {
+export const ContactModal = ({ isContactModalOpen, setIsContactModalOpen }) => {
   const [isSentMessage, setIsSentMessage] = useState(false);
 
   useEffect(() => {
-    if(isSentMessage){
+    if (isSentMessage) {
       setTimeout(() => {
-        setIsSentMessage(false)
-        setIsContactModalOpen(false)
-      }, 3000)
+        setIsSentMessage(false);
+        setIsContactModalOpen(false);
+      }, 3000);
     }
-  } ,[isSentMessage])
+  }, [isSentMessage]);
 
   return (
     <div className="flex justify-center items-center py-5 h-screen fixed inset-0 z-50 outline-none focus:outline-none">
       <div className="overlay absolute inset-0 z-0 bg-gray-400 opacity-80"></div>
-      {!isSentMessage &&(
-        <div className="p-5 md:px-8 border-0 rounded-lg shadow-lg relative flex flex-col items-center justify-between w-[95%] h-[90%] md:w-[95%] md:max-w-[900px] md:h-full md:max-h-[580px] bg-white outline-none focus:outline-none">
+      {!isSentMessage && (
+        <div className={`p-5 md:px-8 border-0 rounded-lg shadow-lg relative flex flex-col items-center justify-between w-[95%] h-[90%] md:w-[95%] md:max-w-[900px] md:h-full md:max-h-[580px] bg-white outline-none focus:outline-none ${isContactModalOpen && 'animate-slide-in'}`}>
           <div
             onClick={() => setIsContactModalOpen(false)}
             className="flex justify-end absolute top-[3%] md:top-[5%] right-[5%] z-30"
@@ -78,7 +78,10 @@ export const ContactModal = ({ setIsContactModalOpen }) => {
               d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"
             />
           </svg>
-          <div className="pl-4 text-3xl">Your request sent successfully. Thank you for considering our service.</div>
+          <div className="pl-4 text-3xl">
+            Your request sent successfully. Thank you for considering our
+            service.
+          </div>
         </div>
       )}
     </div>

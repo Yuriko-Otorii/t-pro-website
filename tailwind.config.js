@@ -11,29 +11,29 @@ export default {
         'cormorant': ["Cormorant, serif"],
       },
       animation: {
-        "slide-in": "slide-in 0.2s linear",
-        "slide-out": "slide-out 0.2s linear"
+        "slide-in": "slide-in 0.2s ease-out",
+        "slide-out": "slide-out 0.2s ease-out"
       },
       keyframes: {
         "slide-in": {
-          "0%": {
-            transform: "translateY(-50px)",
-            opacity: "0"
+          '0%': {
+            transform: 'translateY(100%)',
+            opacity: '0'
           },
-          to: {
-              transform: "translateY(0)",
-              opacity: "1"
-          }
+          '100%': {
+            transform: 'translateY(0)',
+            opacity: '1'
+          }, 
         },
         "slide-out": {
-          "0%": {
-            transform: "translateY(0)",
-            opacity: "1"
+          '0%': {
+            transform: 'translateY(0)',
+            opacity: '1'
           },
-          to: {
-              transform: "translateY(1000px)",
-              opacity: "0"
-          }
+          '100%': {
+            transform: 'translateY(100%)',
+            opacity: '0'
+          },
         }
       }
     },
