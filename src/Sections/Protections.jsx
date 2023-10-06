@@ -22,7 +22,7 @@ export const Protections = () => {
         <div ref={underline} className="w-full bg-[#145B19] h-[2px]"></div>
       </div>
       <div className="flex flex-col items-center md:flex-row md:justify-around md:items-start gap-10 md:gap-0">
-        <div className="w-[70%] md:w-[25%] flex flex-col mb-5">
+        <div className="w-[80%] md:w-[25%] flex flex-col mb-5">
           <img
             src={HomeCareIcon}
             alt="Home care icon"
@@ -37,7 +37,7 @@ export const Protections = () => {
             ad minim veniam,
           </p>
         </div>
-        <div className="w-[70%] md:w-[25%] flex flex-col mb-5">
+        <div className="w-[80%] md:w-[25%] flex flex-col mb-5">
           <img
             src={GuaranteeIcon}
             alt="Home care icon"
@@ -52,7 +52,7 @@ export const Protections = () => {
             ad minim veniam,
           </p>
         </div>
-        <div className="w-[70%] md:w-[25%] flex flex-col mb-5">
+        <div className="w-[80%] md:w-[25%] flex flex-col mb-5">
           <img
             src={InsuranceIcon}
             alt="Home care icon"

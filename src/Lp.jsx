@@ -22,19 +22,21 @@ export const Lp = () => {
     <>
       <HamburgerMenu />
       <Navbar setIsContactModalOpen={setIsContactModalOpen} />
-      <Hero setIsContactModalOpen={setIsContactModalOpen} />
-      <Services />
-      <Protections />
-      <Gallery />
-      <Testimonials />
-      <AboutUs />
-      <History />
-      <Faq />
-      <Contact setIsContactModalOpen={setIsContactModalOpen} />
-      <Footer setIsCareerModalOpen={setIsCareerModalOpen} />
+      <main>
+        <Hero setIsContactModalOpen={setIsContactModalOpen} />
+        <Services />
+        <Protections />
+        <Gallery />
+        <Testimonials />
+        <AboutUs />
+        <History />
+        <Faq />
+        <Contact setIsContactModalOpen={setIsContactModalOpen} />
+        <Footer setIsCareerModalOpen={setIsCareerModalOpen} />
 
-      {isContactModalOpen && <ContactModal setIsContactModalOpen={setIsContactModalOpen} />}
-      {isCareerModalOpen && <CareerModal setIsCareerModalOpen={setIsCareerModalOpen} />}
+        {isContactModalOpen && <ContactModal setIsContactModalOpen={setIsContactModalOpen} />}
+        {isCareerModalOpen && <CareerModal setIsCareerModalOpen={setIsCareerModalOpen} />}
+      </main>
     </>
   );
 };
