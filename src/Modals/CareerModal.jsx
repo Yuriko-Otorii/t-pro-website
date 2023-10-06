@@ -27,9 +27,9 @@ export const CareerModal = ({ setIsCareerModalOpen }) => {
         <img
           src={careerImg}
           alt="Career image"
-          className="hidden md:block w-[55%] h-full absolute top-0 left-0 bg-gradient-to-r from-transparent to-white"
+          className="hidden md:block w-[70%] h-full absolute top-0 left-0 bg-gradient-to-r from-transparent to-white"
         />
-        <div className="hidden md:block w-[55%] h-full absolute top-0 left-0 z-40 bg-gradient-to-r from-transparent to-white"></div>
+        <div className="hidden md:block w-[70%] h-full absolute top-0 left-0 z-40 bg-gradient-to-r from-transparent to-white"></div>
 
         <div className="md:absolute md:top-[15%] md:right-[3%] md:z-50">
           <h2 className="text-[1.5rem] uppercase text-center font-bold underline underline-offset-4 decoration-1 mb-5">
@@ -41,7 +41,7 @@ export const CareerModal = ({ setIsCareerModalOpen }) => {
           <div className="flex justify-center mt-20 mb-10">
             <a
               href="mailto:yuriko.otorii@gmail.com"
-              className="text-white text-[1.2rem] py-[.5rem] px-[2rem] rounded-lg bg-[#145B19] font-bold"
+              className="text-white text-[1.2rem] py-[.5rem] px-[2rem] rounded-lg bg-[#145B19] font-bold hover:text-[#145B19] hover:bg-white hover:border hover:border-[#145B19] transition duration-[500ms]"
             >
               Open your mailer
             </a>

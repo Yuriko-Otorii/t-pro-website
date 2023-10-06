@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react"
-import { ServiceCard } from "../Components/serviceCard"
+import { ServiceCard } from "../Components/ServiceCard"
 import { services } from "../Data/services"
 import { titleUnderlineAnimation } from "../animation/titleUnderline"
 

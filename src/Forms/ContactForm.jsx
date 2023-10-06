@@ -157,7 +157,7 @@ export const ContactForm = ({ setIsSentMessage }) => {
       <button
         type="submit"
         onClick={(e) => handleSubmit(e)}
-        className="w-2/3 self-center bg-[#145B19] text-white font-semibold my-8 hover:text-[#145B19] hover:bg-white hover:border border-[#145B19] disabled:opacity-50"
+        className="w-2/3 self-center bg-[#145B19] text-white font-semibold my-8 hover:text-[#145B19] hover:bg-white hover:border hover:border-[#145B19] transition duration-[500ms] disabled:opacity-50 disabled:hover:bg-[#145B19] disabled:hover:text-white"
       >
         {isSending? "Sending...": "Send"}
       </button>
