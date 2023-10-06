@@ -6,8 +6,8 @@ export const FaqCollapse = ({item}) => {
 
   return (
     <div className="w-full max-w-md mx-auto">
-      <div
-        className={`w-full flex justify-between px-4 py-2 font-bold border border-[#145B19] focus:outline-none ${isOpen && 'border-b-transparent'}`}
+      <button
+        className={`w-full flex justify-between px-4 py-2 font-bold rounded-none border border-[#145B19] focus:outline-none ${isOpen && 'border-b-transparent rounded-none'}`}
         type="button"
         onClick={() => setIsOpen(!isOpen)}
       >
@@ -24,7 +24,7 @@ export const FaqCollapse = ({item}) => {
             </svg>
           )
         }
-      </div>
+      </button>
       <Transition
         show={isOpen}
         enter="transition duration-200 ease-out"

@@ -37,14 +37,14 @@ export const AboutUs = () => {
           commercial property, we transform your property into bland new design.
         </p>
       </div>
-      <div className="flex items-start gap-[.5rem] mx-auto md:w-[100%] lg:w-[80%] xl:w-[60%] hidden md:flex">
+      <div className="hidden md:flex flex items-start gap-[.5rem] mx-auto md:w-[100%] lg:w-[80%] xl:w-[60%]">
         <div className="relative flex-1">
           <img
             src={housePicture}
             alt="House picture"
-            className="w-[300px] h-[300px] mx-auto"
+            className="w-[300px] h-[300px] md:w-[330px] md:h-[330px] mx-auto"
           />
-          <div className="w-[300px] h-[300px] bg-[#145B19] absolute top-[-5%] left-[5%] -z-10"></div>
+          <div className="w-[300px] h-[300px] md:w-[330px] md:h-[330px] bg-[#145B19] absolute top-[-5%] left-[5%] -z-10"></div>
         </div>
         <div className="flex-1">
           <div
