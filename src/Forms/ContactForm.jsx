@@ -32,8 +32,7 @@ export const ContactForm = ({ setIsSentMessage }) => {
         form.current,
         import.meta.env.VITE_PUBLIC_KEY
       );
-      if(result.satus === 200){
-        console.log("Success");
+      if(result.status === 200){
         setIsSending(false)
         setIsSentMessage(true)
       }
