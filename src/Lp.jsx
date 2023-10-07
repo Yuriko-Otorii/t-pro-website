@@ -25,15 +25,15 @@ export const Lp = () => {
       setIsContactModalOpen(false)
       setTimeout(() => {
         setIsSentMessage(false);
-      }, 3000);
+      }, 3500);
     }
   }, [isSentMessage]);
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       <HamburgerMenu />
       <Navbar setIsContactModalOpen={setIsContactModalOpen} />
-      <main>
+      <main className="relative">
         <Hero setIsContactModalOpen={setIsContactModalOpen} />
         <Services />
         <Protections />
@@ -61,13 +61,13 @@ export const Lp = () => {
         )}
         <div
           id="toast-simple"
-          className={`absolute left-[50%] translate-x-[-50%] z-50 flex flex-col items-center justify-center w-[90%] h-[40%] md:w-[600px] md:h-[300px] h-fit p-4 space-x-4 z-20 bg-white divide-x divide-gray-200 rounded-lg shadow space-x ease-linear duration-[300ms] ${
+          className={`fixed left-[50%] translate-x-[-50%] z-50 flex flex-col items-center justify-center w-[90%] h-[40%] md:w-[550px] md:h-[300px] h-fit p-4 space-x-4 z-20 bg-green-100 divide-x divide-gray-200 rounded-lg shadow space-x ease-linear duration-[300ms] ${
             isSentMessage ? "top-[10%]" : "top-[-500px]"
           }`}
           role="alert"
         >
           <svg
-            className="w-12 h-12 md:w-20 md:h-20 md:ml-2 text-blue-600 dark:text-blue-500 rotate-45"
+            className="w-12 h-12 md:w-12 md:h-12 md:ml-2 text-blue-600 dark:text-blue-500 rotate-45"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -81,12 +81,12 @@ export const Lp = () => {
               d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"
             />
           </svg>
-          <div className="md:pl-4 text-2xl md:text-3xl mt-10 md'mt-0">
+          <div className="md:pl-4 text-lg md:text-2xl mt-10 font-bold">
             Your request sent successfully. Thank you for considering our
             service.
           </div>
         </div>
       </main>
-    </>
+    </div>
   );
 };

@@ -86,7 +86,7 @@ export const CareerModal = ({ isCareerModalOpen, setIsCareerModalOpen }) => {
 
       <div
         id="toast-simple"
-        className={`absolute left-[50%] translate-x-[-50%] z-50 mx-auto w-fit whitespace-nowrap flex items-center justify-center w-fit h-fit p-4 space-x-4 z-20 bg-white divide-x divide-gray-200 rounded-lg shadow space-x ease-linear duration-[300ms] ${
+        className={`absolute left-[50%] translate-x-[-50%] z-50 mx-auto bg-green-100 w-fit whitespace-nowrap flex items-center justify-center w-fit h-fit p-4 space-x-4 z-20 divide-x divide-gray-200 rounded-lg shadow space-x ease-linear duration-[300ms] ${
           isCopied ? "top-[3%]" : "top-[-100px]"
         }`}
         role="alert"
@@ -97,16 +97,16 @@ export const CareerModal = ({ isCareerModalOpen, setIsCareerModalOpen }) => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-8 h-8"
+          className="w-6 h-6"
         >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
-            d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59"
+            d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
           />
         </svg>
 
-        <div className="pl-4 text-2xl">Copied email address!</div>
+        <div className="md:pl-2 text-lg font-bold">Copied email address!</div>
       </div>
     </div>
   );

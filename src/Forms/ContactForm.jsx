@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Datepicker from "react-tailwindcss-datepicker";
 
-export const ContactForm = ({ setIsSentMessage }) => {
-  const form = useRef(null)
-  const [isSending, setIsSending] = useState(false)
+export const ContactForm = ({ setIsSentMessage, setIsError }) => {
+  const form = useRef(null);
+  const [isSending, setIsSending] = useState(false);
   const [possession, setPossession] = useState("No");
   const [value, setValue] = useState({
     startDate: new Date(),
@@ -12,10 +12,10 @@ export const ContactForm = ({ setIsSentMessage }) => {
   });
 
   useEffect(() => {
-    const parentNode = document.getElementById("datePicker")
-    const datePickerInput = parentNode.children[0].children[1].children[0]
-    datePickerInput.setAttribute('name', "date")
-  }, [])
+    const parentNode = document.getElementById("datePicker");
+    const datePickerInput = parentNode.children[0].children[1].children[0];
+    datePickerInput.setAttribute("name", "date");
+  }, []);
 
   const handleValueChange = (newValue) => {
     console.log("newValue:", newValue);
@@ -24,20 +24,28 @@ export const ContactForm = ({ setIsSentMessage }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSending(true)
+    setIsSending(true);
     try {
-      const result = await emailjs.sendForm(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_CONTACT_TEMPLATE_ID,
-        form.current,
-        import.meta.env.VITE_PUBLIC_KEY
-      );
-      if(result.status === 200){
-        setIsSending(false)
-        setIsSentMessage(true)
-      }
+      // const result = await emailjs.sendForm(
+      //   import.meta.env.VITE_SERVICE_ID,
+      //   import.meta.env.VITE_CONTACT_TEMPLATE_ID,
+      //   form.current,
+      //   import.meta.env.VITE_PUBLIC_KEY
+      // );
+      // if(result.status === 200){
+      //   setIsSending(false)
+      //   setIsSentMessage(true)
+      // }
+
+      setIsSending(false)
+      setIsSentMessage(true)
+
     } catch (error) {
-      console.log("Something went wrong...");
+      setIsSending(false);
+      setIsError(true);
+      setTimeout(() => {
+        setIsError(false);
+      }, 4000);
     }
   };
 
@@ -158,7 +166,7 @@ export const ContactForm = ({ setIsSentMessage }) => {
         onClick={(e) => handleSubmit(e)}
         className="w-2/3 self-center bg-[#145B19] text-white font-semibold my-8 hover:text-[#145B19] hover:bg-white hover:border hover:border-[#145B19] transition duration-[500ms] disabled:opacity-50 disabled:hover:bg-[#145B19] disabled:hover:text-white"
       >
-        {isSending? "Sending...": "Send"}
+        {isSending ? "Sending..." : "Send"}
       </button>
     </form>
   );
