@@ -26,20 +26,16 @@ export const ContactForm = ({ setIsSentMessage, setIsError }) => {
     e.preventDefault();
     setIsSending(true);
     try {
-      // const result = await emailjs.sendForm(
-      //   import.meta.env.VITE_SERVICE_ID,
-      //   import.meta.env.VITE_CONTACT_TEMPLATE_ID,
-      //   form.current,
-      //   import.meta.env.VITE_PUBLIC_KEY
-      // );
-      // if(result.status === 200){
-      //   setIsSending(false)
-      //   setIsSentMessage(true)
-      // }
-
-      setIsSending(false)
-      setIsSentMessage(true)
-
+      const result = await emailjs.sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_CONTACT_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_PUBLIC_KEY
+      );
+      if(result.status === 200){
+        setIsSending(false)
+        setIsSentMessage(true)
+      }
     } catch (error) {
       setIsSending(false);
       setIsError(true);
