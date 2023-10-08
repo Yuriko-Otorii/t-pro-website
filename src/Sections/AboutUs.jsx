@@ -32,7 +32,7 @@ export const AboutUs = () => {
           className="w-full h-auto mx-auto mb-[2rem]"
         />
         <p className="font-bold text-center text-[1.3rem]">Quality first</p>
-        <p className="m-[1rem]">
+        <p className="m-[1rem] text-lg">
           We are the professional painters in Vancouver. From residential to
           commercial property, we transform your property into bland new design.
         </p>
@@ -56,7 +56,7 @@ export const AboutUs = () => {
             </h2>
             <div ref={mobileUnderline} className="w-full bg-[#145B19] h-[2px]"></div>
           </div>
-          <p className="mx-[1rem]">
+          <p className="mx-[1rem] text-lg">
             We are the professional painters in Vancouver. From residential to
             commercial property, we transform your property into bland new
             design.

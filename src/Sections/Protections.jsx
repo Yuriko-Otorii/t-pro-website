@@ -31,7 +31,7 @@ export const Protections = () => {
           <h3 className="text-[1.3rem] font-bold mb-[.5rem]">
             Workers’ Compensation Board member
           </h3>
-          <p className="">
+          <p className="text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam,
@@ -46,7 +46,7 @@ export const Protections = () => {
           <h3 className="text-[1.3rem] font-bold mb-[.5rem]">
             Liability Insurance ($5 million)
           </h3>
-          <p className="">
+          <p className="text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam,
@@ -61,7 +61,7 @@ export const Protections = () => {
           <h3 className="text-[1.3rem] font-bold mb-[.5rem]">
             3-year application guarantee
           </h3>
-          <p>
+          <p className="text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam,

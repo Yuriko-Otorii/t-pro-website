@@ -8,7 +8,7 @@ export const testimonials = [
     id: 1,
     description:
       "I love how they changed my property. This is utterly beyond my expectation. I am satisfied with how they paid attention to details.",
-    name: "Hanna Huston",
+    name: "Jason Parker",
     address: "Burnaby, BC",
     img: img1,
   },
@@ -16,7 +16,7 @@ export const testimonials = [
     id: 2,
     description:
       "I love how they changed my property. This is utterly beyond my expectation. I am satisfied with how they paid attention to details.",
-    name: "Jason Parker",
+    name: "Hanna Huston",
     address: "Richmond, BC",
     img: img2,
   },

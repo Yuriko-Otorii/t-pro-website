@@ -20,6 +20,7 @@ export const titleUnderlineAnimation = (titleElem, underlineElem) => {
         trigger: titleElem,
         start: "top center",
       },
+      duration: 1.5
     },
   )
 };

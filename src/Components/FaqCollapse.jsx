@@ -7,7 +7,7 @@ export const FaqCollapse = ({item}) => {
   return (
     <div className="w-full max-w-md mx-auto">
       <button
-        className={`w-full flex justify-between px-4 py-2 font-bold rounded-none border border-[#145B19] focus:outline-none ${isOpen && 'border-b-transparent rounded-none'}`}
+        className={`w-full flex justify-between px-4 py-2 font-bold text-lg rounded-none border border-[#145B19] focus:outline-none ${isOpen && 'border-b-transparent rounded-none'}`}
         type="button"
         onClick={() => setIsOpen(!isOpen)}
       >
@@ -35,7 +35,7 @@ export const FaqCollapse = ({item}) => {
         leaveTo="transform scale-95 opacity-0"
       >
         <div className="">
-          <p className="px-4 py-2 border border-x-[#145B19] border-b-[#145B19]">{item.answer}</p>
+          <p className="px-4 py-2 text-lg border border-x-[#145B19] border-b-[#145B19]">{item.answer}</p>
         </div>
       </Transition>
     </div>
