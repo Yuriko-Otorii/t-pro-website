@@ -57,7 +57,11 @@ export default {
             opacity: '0'
           },  
         }
-      }
+      },
+      transformOrigin: {
+        'right-top': 'right top',
+        'left-top': 'left top',
+      },
     },
   },
   plugins: [],
