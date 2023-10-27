@@ -5,10 +5,10 @@ import { useEffect } from "react";
 import { heroAnimation } from "../animation/hero";
 
 export const Hero = ({ setIsContactModalOpen }) => {
-  const textElem = useRef()
-  const btnElem = useRef()
-  const mobileTextElem = useRef()
-  const mobileBtnElem = useRef()
+  const textElem = useRef(null)
+  const btnElem = useRef(null)
+  const mobileTextElem = useRef(null)
+  const mobileBtnElem = useRef(null)
 
   useEffect(() => {
     heroAnimation(textElem, btnElem)

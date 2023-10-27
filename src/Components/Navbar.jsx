@@ -37,7 +37,7 @@ export const Navbar = ({ setIsContactModalOpen }) => {
             </li>
           </ul>
           <button
-            className="text-white text-[1.2rem] py-[.3rem] px-[.8rem] bg-[#145B19] font-bold hover:text-[#145B19] hover:bg-white hover:border-2 hover:boder-[#145B19] transition duration-[500ms]"
+            className="text-white text-[1.2rem] py-[.3rem] px-[.8rem] bg-[#145B19] font-bold border-2 border-[#145B19] hover:text-[#145B19] hover:bg-white transition duration-[500ms]"
             onClick={() => setIsContactModalOpen(true)}
           >
             Request Estimate
