@@ -57,9 +57,9 @@ export const AboutUs = () => {
             <div ref={mobileUnderline} className="w-full bg-[#145B19] h-[2px]"></div>
           </div>
           <p className="mx-[1rem] text-lg">
-            We are the professional painters in Vancouver. From residential to
+            We, T-Pro Painting are the professional painters in Vancouver. From residential to
             commercial property, we transform your property into bland new
-            design.
+            design. 
           </p>
         </div>
       </div>

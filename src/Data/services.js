@@ -1,8 +1,8 @@
 import img1 from "../assets/work image1.jpg"
 import img2 from "../assets/work image6.jpg"
 import img3 from "../assets/work image10.jpg"
-import img4 from "../assets/work image14.jpg"
-import img5 from "../assets/work image5.jpg"
+import img4 from "../assets/power washing.jpg"
+import img5 from "../assets/decksealing.jpg"
 import img6 from "../assets/work image13.jpg"
 
 export const services = [

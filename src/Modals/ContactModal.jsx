@@ -47,9 +47,10 @@ export const ContactModal = ({
         <div className="flex w-full overflow-y-scroll z-20">
           <div className="hidden md:block w-[55%] h-full"></div>
           <div className="flex flex-col">
-            <h2 className="text-[1.5rem] uppercase text-center font-bold underline underline-offset-4 decoration-1 mb-3">
+            <h2 className="text-[1.5rem] uppercase text-center font-bold underline underline-offset-4 decoration-1 mb-1.5">
               Contact us
             </h2>
+            <p className="text-center text-xl font-bold">You can request your free estimate from here.</p>
             <ContactForm
               setIsSentMessage={setIsSentMessage}
               setIsError={setIsError}

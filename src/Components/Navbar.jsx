@@ -5,8 +5,9 @@ export const Navbar = ({ setIsContactModalOpen }) => {
   return (
     <nav className="hidden md:block w-full h-fit absolute top-0 left-0 z-10 bg-white p-[.5rem] pl-[3rem] pr-[3rem]">
       <div className="flex justify-between items-center">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
           <img src={logo} alt="Logo image" className="w-[40px] h-[40px]" />
+          <p className="font-bold text-lg">T-Pro painting</p>
         </div>
         <div className="flex items-center gap-14">
           <ul className="flex items-center gap-8">

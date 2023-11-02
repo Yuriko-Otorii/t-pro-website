@@ -7,7 +7,7 @@ export const FaqCollapse = ({item}) => {
   return (
     <div className="w-full max-w-md mx-auto">
       <button
-        className={`w-full flex justify-between px-4 py-2 font-bold text-lg rounded-none border border-[#145B19] focus:outline-none ${isOpen && 'border-b-transparent rounded-none'}`}
+        className={`w-full flex justify-between items-center px-4 py-2 font-bold text-lg rounded-none border border-[#145B19] focus:outline-none ${isOpen && 'border-b-transparent rounded-none'}`}
         type="button"
         onClick={() => setIsOpen(!isOpen)}
       >

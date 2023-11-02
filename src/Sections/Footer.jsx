@@ -151,7 +151,7 @@ export const Footer = ({ setIsCareerModalOpen }) => {
           </div>
           <div>
             <a
-              href="https://instagram.com/tpropainting?igshid=MzMyNGUyNmU2YQ=="
+              href="https://instagram.com/tpropainting"
               rel="noreferrer"
               target="_blank"
               className="flex items-center mt-5 gap-2 text-[#213547]"
