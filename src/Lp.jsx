@@ -14,6 +14,7 @@ import { Contact } from "./Sections/Contact";
 import { ContactModal } from "./Modals/ContactModal";
 import { Footer } from "./Sections/Footer";
 import { CareerModal } from "./Modals/CareerModal";
+import { Area } from "./Sections/Area";
 
 export const Lp = () => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -41,6 +42,7 @@ export const Lp = () => {
         <Testimonials />
         <AboutUs />
         <History />
+        <Area />
         <Faq />
         <Contact setIsContactModalOpen={setIsContactModalOpen} />
         <Footer setIsCareerModalOpen={setIsCareerModalOpen} />
