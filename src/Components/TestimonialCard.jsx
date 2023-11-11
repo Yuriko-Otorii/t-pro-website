@@ -1,6 +1,6 @@
 export const TestimonialCard = ({ testimonialInfo }) => {
   return (
-    <div className="w-[260px] py-[1rem] bg-white border border-gray-200 rounded-lg shadow mx-auto relative">
+    <div className="w-[260px] md:w-1/2 lg:w-[260px] py-[1rem] bg-white border border-gray-200 rounded-lg shadow mx-auto relative">
       <p className="px-[1.2rem] text-2xl">{testimonialInfo.description}</p>
       <div className="border border-gary-200 mt-[2rem] mb-[.5rem]"></div>
       <p className="px-[1rem] font-bold text-xl">{testimonialInfo.name}</p>
