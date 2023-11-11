@@ -17,22 +17,22 @@ export const Navbar = ({ setIsContactModalOpen }) => {
               </AnchorLink>
             </li>
             <li>
-              <AnchorLink className="font-bold text-[#333]  pb-2 px-2 relative hover:text-[#145B19] before:content-[''] before:bg-[#145B19] before:w-full before:h-[2px] before:absolute before:left-0 before:bottom-0 before:margin-auto before:origin-right-top before:scale-x-0 before:scale-y-100 before:transition before:duration-300 hover:before:origin-left-top hover:before:scale-x-100 hover:before:scale-y-100" href="#protections">
+              <AnchorLink className="font-bold text-[#333] pb-2 px-2 relative hover:text-[#145B19] before:content-[''] before:bg-[#145B19] before:w-full before:h-[2px] before:absolute before:left-0 before:bottom-0 before:margin-auto before:origin-right-top before:scale-x-0 before:scale-y-100 before:transition before:duration-300 hover:before:origin-left-top hover:before:scale-x-100 hover:before:scale-y-100" href="#protections">
                 Protection
               </AnchorLink>
             </li>
             <li>
-              <AnchorLink className="font-bold text-[#333]  pb-2 px-2 relative hover:text-[#145B19] before:content-[''] before:bg-[#145B19] before:w-full before:h-[2px] before:absolute before:left-0 before:bottom-0 before:margin-auto before:origin-right-top before:scale-x-0 before:scale-y-100 before:transition before:duration-300 hover:before:origin-left-top hover:before:scale-x-100 hover:before:scale-y-100" href="#gallery">
+              <AnchorLink className="font-bold text-[#333] pb-2 px-2 relative hover:text-[#145B19] before:content-[''] before:bg-[#145B19] before:w-full before:h-[2px] before:absolute before:left-0 before:bottom-0 before:margin-auto before:origin-right-top before:scale-x-0 before:scale-y-100 before:transition before:duration-300 hover:before:origin-left-top hover:before:scale-x-100 hover:before:scale-y-100" href="#gallery">
                 Gallery
               </AnchorLink>
             </li>
             <li>
-              <AnchorLink className="font-bold text-[#333]  pb-2 px-2 relative hover:text-[#145B19] before:content-[''] before:bg-[#145B19] before:w-full before:h-[2px] before:absolute before:left-0 before:bottom-0 before:margin-auto before:origin-right-top before:scale-x-0 before:scale-y-100 before:transition before:duration-300 hover:before:origin-left-top hover:before:scale-x-100 hover:before:scale-y-100" href="#aboutus">
+              <AnchorLink className="font-bold text-[#333] pb-2 px-2 relative hover:text-[#145B19] before:content-[''] before:bg-[#145B19] before:w-full before:h-[2px] before:absolute before:left-0 before:bottom-0 before:margin-auto before:origin-right-top before:scale-x-0 before:scale-y-100 before:transition before:duration-300 hover:before:origin-left-top hover:before:scale-x-100 hover:before:scale-y-100" href="#aboutus">
                 About us
               </AnchorLink>
             </li>
             <li>
-              <AnchorLink className="font-bold text-[#333]  pb-2 px-2 relative hover:text-[#145B19] before:content-[''] before:bg-[#145B19] before:w-full before:h-[2px] before:absolute before:left-0 before:bottom-0 before:margin-auto before:origin-right-top before:scale-x-0 before:scale-y-100 before:transition before:duration-300 hover:before:origin-left-top hover:before:scale-x-100 hover:before:scale-y-100" href="#faq">
+              <AnchorLink className="font-bold text-[#333] pb-2 px-2 relative hover:text-[#145B19] before:content-[''] before:bg-[#145B19] before:w-full before:h-[2px] before:absolute before:left-0 before:bottom-0 before:margin-auto before:origin-right-top before:scale-x-0 before:scale-y-100 before:transition before:duration-300 hover:before:origin-left-top hover:before:scale-x-100 hover:before:scale-y-100" href="#faq">
                 FAQ
               </AnchorLink>
             </li>

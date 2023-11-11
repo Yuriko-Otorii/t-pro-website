@@ -33,7 +33,7 @@ export const History = () => {
         </div>
       </div>
       <div className="w-[80%] md:w-[450px] lg:w-[650px] xl:w-[800px]">
-        <p className="text-white text-[1.3rem] mt-16 mb-20">
+        <p className="text-white text-2xl mt-16 mb-20">
           Welcome to our painting company, where creativity meets craftsmanship.
           With a passion for painting, we bring your visions to life,
           transforming spaces one brushstroke at a time. From residential to

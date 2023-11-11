@@ -10,41 +10,41 @@ export const Footer = ({ setIsCareerModalOpen }) => {
       <div className="flex flex-col md:flex-row gap-12">
         <div className="flex gap-10 mb-5 md:mb-0 md:flex-row md:gap-12">
           <div className="flex flex-col">
-            <p className="font-bold text-lg mb-5">Company</p>
+            <p className="font-bold text-xl mb-5">Company</p>
             <ul className="flex flex-col gap-1">
               <li>
-                <AnchorLink className="text-[#213547]" href="#aboutus">
+                <AnchorLink className="text-[#213547] text-lg" href="#aboutus">
                   About us
                 </AnchorLink>
               </li>
               <li>
-                <AnchorLink className="text-[#213547]" href="#protections">
+                <AnchorLink className="text-[#213547] text-lg" href="#protections">
                   Protections
                 </AnchorLink>
               </li>
               <li>
-                <AnchorLink className="text-[#213547]" href="#gallery">
+                <AnchorLink className="text-[#213547] text-lg" href="#gallery">
                   Gallery
                 </AnchorLink>
               </li>
               <li>
-                <AnchorLink className="text-[#213547]" href="#testimonials">
+                <AnchorLink className="text-[#213547] text-lg" href="#testimonials">
                   Testimonials
                 </AnchorLink>
               </li>
               <li>
-                <AnchorLink className="text-[#213547]" href="#history">
+                <AnchorLink className="text-[#213547] text-lg" href="#history">
                   History
                 </AnchorLink>
               </li>
               <li>
-                <AnchorLink className="text-[#213547]" href="#faq">
+                <AnchorLink className="text-[#213547] text-lg" href="#faq">
                   FAQ
                 </AnchorLink>
               </li>
               <li>
                 <p
-                  className="text-[#213547] cursor-pointer"
+                  className="text-[#213547] text-lg cursor-pointer"
                   onClick={() => setIsCareerModalOpen(true)}
                 >
                   Career
@@ -53,35 +53,35 @@ export const Footer = ({ setIsCareerModalOpen }) => {
             </ul>
           </div>
           <div className="flex flex-col">
-            <p className="font-bold text-lg mb-5">Services</p>
+            <p className="font-bold text-xl mb-5">Services</p>
             <ul className="flex flex-col gap-1">
               <li>
-                <AnchorLink className="text-[#213547]" href="#services">
+                <AnchorLink className="text-[#213547] text-lg" href="#services">
                   Interior & Exterior Painting
                 </AnchorLink>
               </li>
               <li>
-                <AnchorLink className="text-[#213547]" href="#services">
+                <AnchorLink className="text-[#213547] text-lg" href="#services">
                   Wallpaper Removal
                 </AnchorLink>
               </li>
               <li>
-                <AnchorLink className="text-[#213547]" href="#services">
+                <AnchorLink className="text-[#213547] text-lg" href="#services">
                   Exterior Metal
                 </AnchorLink>
               </li>
               <li>
-                <AnchorLink className="text-[#213547]" href="#services">
+                <AnchorLink className="text-[#213547] text-lg" href="#services">
                   Deck Sealing
                 </AnchorLink>
               </li>
               <li>
-                <AnchorLink className="text-[#213547]" href="#services">
+                <AnchorLink className="text-[#213547] text-lg" href="#services">
                   Power Washing
                 </AnchorLink>
               </li>
               <li>
-                <AnchorLink className="text-[#213547]" href="#services">
+                <AnchorLink className="text-[#213547] text-lg" href="#services">
                   Limewash Paint
                 </AnchorLink>
               </li>
@@ -106,7 +106,7 @@ export const Footer = ({ setIsCareerModalOpen }) => {
                   d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
                 />
               </svg>
-              <p className="font-semibold">tpropainting03@gmail.com</p>
+              <p className="font-semibold text-xl">tpropainting03@gmail.com</p>
             </div>
             <div className="flex gap-1 items-center">
               <svg
@@ -124,7 +124,7 @@ export const Footer = ({ setIsCareerModalOpen }) => {
                 />
               </svg>
 
-              <p className="font-semibold">+1 (236) 886 - 1661</p>
+              <p className="font-semibold text-xl">+1 (236) 886 - 1661</p>
             </div>
             <div className="flex gap-1 items-center">
               <svg
@@ -146,7 +146,7 @@ export const Footer = ({ setIsCareerModalOpen }) => {
                   d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
                 />
               </svg>
-              <p className="font-semibold">Vancouver, BC</p>
+              <p className="font-semibold text-xl">Vancouver, BC</p>
             </div>
           </div>
           <div>
@@ -156,7 +156,7 @@ export const Footer = ({ setIsCareerModalOpen }) => {
               target="_blank"
               className="flex items-center mt-5 gap-2 text-[#213547]"
             >
-              <p>Find our works!</p>
+              <p className="text-lg">Find our works!</p>
               <FontAwesomeIcon
                 icon={faInstagram}
                 style={{ color: "#4d4d4d" }}
@@ -166,7 +166,7 @@ export const Footer = ({ setIsCareerModalOpen }) => {
           </div>
         </div>
       </div>
-      <p className="text-sm mt-8 mb-2">©T-Pro Painting</p>
+      <p className="text-lg mt-8 mb-2">©T-Pro Painting</p>
     </div>
   );
 };

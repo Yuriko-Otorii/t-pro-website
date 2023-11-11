@@ -28,13 +28,11 @@ export const Protections = () => {
             alt="Home care icon"
             className="w-[3rem] h-[3rem] self-center mb-5"
           />
-          <h3 className="text-xl font-bold mb-[1rem]">
+          <h3 className="text-2xl font-bold mb-[1rem]">
             Workers’ Compensation Board member
           </h3>
-          <p className="text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam,
+          <p className="text-xl">
+            We are Workers’ Compensation Board (WCB) member, and that provides financial and medical support for employees who may suffer work-related injuries or illnesses.
           </p>
         </div>
         <div className="w-[90%] md:w-[25%] flex flex-col mb-5">
@@ -43,13 +41,11 @@ export const Protections = () => {
             alt="Home care icon"
             className="w-[3rem] h-[3rem] self-center mb-5"
           />
-          <h3 className="text-xl font-bold mb-[1rem]">
+          <h3 className="text-2xl font-bold mb-[1rem]">
             Liability Insurance ($5 million)
           </h3>
-          <p className="text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam,
+          <p className="text-xl">
+            We have a 5 million dollar liability insurance that is fully covered by the Workers’ Compensation Board (WCB). This means you are free to be concerned about unexpected payments in case of accidents during our work.
           </p>
         </div>
         <div className="w-[90%] md:w-[25%] flex flex-col mb-5">
@@ -58,13 +54,11 @@ export const Protections = () => {
             alt="Home care icon"
             className="w-[3rem] h-[3rem] self-center mb-5"
           />
-          <h3 className="text-xl font-bold mb-[1rem]">
+          <h3 className="text-2xl font-bold mb-[1rem]">
             3-year application guarantee
           </h3>
-          <p className="text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam,
+          <p className="text-xl">
+            We are sure our services always come with high quality in your property. But something wrong happens like the paint begins to peel by unpredictable reason. We provide a 3-year application guarantee that covers fixing any unexpected results.
           </p>
         </div>
       </div>
