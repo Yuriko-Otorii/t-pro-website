@@ -5,13 +5,13 @@ export const FaqCollapse = ({item}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="min-w-[460px] w-[70%] md:w-[60%] lg:w-[40%] mx-auto">
+    <div className="w-full md:w-[60%] lg:w-[40%] mx-auto">
       <button
-        className={`w-full flex justify-between items-center whitespace-nowrap px-4 py-2 font-bold text-xl rounded-none border border-[#145B19] focus:outline-none ${isOpen && 'border-b-transparent rounded-none'}`}
+        className={`w-full flex justify-between items-center px-4 py-2 rounded-none border border-[#145B19] focus:outline-none ${isOpen && 'border-b-transparent rounded-none'}`}
         type="button"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {item.question}
+        <p className="font-bold text-xl text-left">{item.question}</p>
         {isOpen
           ? (
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 ml-5">
