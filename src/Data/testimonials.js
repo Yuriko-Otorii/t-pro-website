@@ -7,7 +7,7 @@ export const testimonials = [
   { 
     id: 1,
     description:
-      "I love how they changed my property. This is utterly beyond my expectation. I am satisfied with how they paid attention to details.",
+      "I love how they changed my property. The transformation of our house is utterly beyond my expectation. I am satisfied with how they paid attention to details.",
     name: "Jason Parker",
     address: "Burnaby, BC",
     img: img1,
@@ -15,7 +15,7 @@ export const testimonials = [
   {
     id: 2,
     description:
-      "I love how they changed my property. This is utterly beyond my expectation. I am satisfied with how they paid attention to details.",
+      "The outcome is quite aligned with our expectations. Their friendliness and prompt response made us feel comfortable entrusting them with the work.",
     name: "Hanna Huston",
     address: "Richmond, BC",
     img: img2,
@@ -23,7 +23,7 @@ export const testimonials = [
   {
     id: 3,
     description:
-      "I love how they changed my property. This is utterly beyond my expectation. I am satisfied with how they paid attention to details.",
+      "T-Pro Painting did an amazing job. I had not made up my mind about the color, but they made an excellent suggestion. From beginning to end, the experience with them is wonderful.",
     name: "Rose McGuire",
     address: "Surrey, BC",
     img: img3,

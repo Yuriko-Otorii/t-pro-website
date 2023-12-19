@@ -30,7 +30,7 @@ export const Gallery = () => {
         <h2 className="text-[#145B19] w-fit text-[2rem] uppercase text-center font-bold decoration-1">Gallery</h2>
         <div ref={underline} className="w-full bg-[#145B19] h-[2px]"></div>
       </div>
-      <div className="md:w-[80%] lg:w-[60%] md:h-[1000px] lg:h-[1300px] mx-auto grid grid-cols-2 grid-rows-4 gap-[.5rem]">
+      <div className="md:w-[80%] lg:w-[60%] max-w-[850px]  md:h-[1000px] lg:h-[1300px] mx-auto grid grid-cols-2 grid-rows-4 gap-[.5rem]">
         <img
           ref={img1}
           src={Gallery1}
