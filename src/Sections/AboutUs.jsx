@@ -15,7 +15,7 @@ export const AboutUs = () => {
   }, []);
 
   return (
-    <div className="w-full p-[1rem] mb-[3rem] md:my-[5rem]" id="aboutus">
+    <div className="w-full mb-[3rem] mx-[2rem] md:my-[5rem]" id="aboutus">
       <div className="md:hidden">
         <div
           ref={mdTitleElem}
@@ -38,18 +38,18 @@ export const AboutUs = () => {
         </p>
       </div>
       <div className="hidden md:flex flex items-start gap-[.5rem] mx-auto md:w-[100%] lg:w-[80%] xl:w-[60%]">
-        <div className="relative flex-1">
+        <div className="relative flex-1 w-fit">
           <img
             src={housePicture}
             alt="House picture"
-            className="w-[300px] h-[300px] md:w-[330px] md:h-[330px] mx-auto"
+            className="w-[300px] h-[300px] md:w-[330px] md:h-[330px]"
           />
-          <div className="w-[300px] h-[300px] md:w-[330px] md:h-[330px] bg-[#145B19] absolute top-[-5%] left-[5%] -z-10"></div>
+          <div className="w-[300px] h-[300px] md:w-[330px] md:h-[330px] bg-[#145B19] absolute top-[-5%] left-[-5%] -z-10"></div>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 mr-[1.5rem]">
           <div
             ref={mobilTitleElem}
-            className="relativ w-fit mx-auto my-[1rem] my-[2rem] md:mb-[4rem]"
+            className="relativ w-fit mx-auto my-[2rem] md:mb-[4rem]"
           >
             <h2 className="text-[#145B19] w-fit text-[2rem] uppercase text-center font-bold decoration-1">
               About us
